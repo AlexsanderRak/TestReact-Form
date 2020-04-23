@@ -1,0 +1,61 @@
+@import '../../allColor.scss';
+
+.dropDownMenu {
+    min-width: 150px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    height: 40px;
+    border: 1px solid $border;
+    border-radius: 5px;
+    position: relative;
+    margin: 15px 10px;
+
+    @media screen and (max-width:"1070px") { 
+        min-width: 176px;
+    }
+    
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background: $white;
+        cursor: pointer;
+
+
+        &-arrow {
+            width: 30px;
+            height: 30px;
+            background: url(../../Img/down-arrow.svg) no-repeat;
+            background-size: 15px 15px;
+            background-position: center;
+            transition: all .3s;
+        }
+
+        &-arrow.active { 
+            transform: rotate(180deg);
+        }
+    }
+   
+    &-bottom {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        left: 0;
+        border-radius: 5px;
+        width: 100%;
+        background: $white;
+        box-shadow: 0 0 6px 2px $boxShodow;
+    }
+
+    &-bottom.active { 
+        display: block;
+    }
+}

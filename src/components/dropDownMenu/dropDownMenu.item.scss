@@ -1,0 +1,71 @@
+@import '../../allColor.scss';
+
+.dropDownMenuItem-header {
+    display: flex;
+    align-items: center;
+    max-width: 250px;
+    overflow-x: hidden;
+
+    &-title {
+        white-space: nowrap;
+        font-size: 16px;
+        color: $text;
+        padding: 0 10px;
+    }
+
+    &-defualt {
+        font-size: 16px;
+        color: $text;
+    }
+}
+
+.dropDownMenuItem-bottom {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 5px;
+    position: relative;
+
+    &-search {
+        height: 30px;
+        padding-left: 30px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $border;
+        background: url(../../Img/search.svg) no-repeat;
+        background-size: 15px 15px;
+        background-position: center left 5px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background: $white;
+        cursor: pointer;
+        transition: all .3s;
+    
+        &:first-child {
+            border-radius: 5px 5px 0 0;
+        }
+    
+        &:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    
+        &:hover {
+            background: $item-hover;
+        }
+    
+        &-title {
+            white-space: nowrap;
+            font-size: 16px;
+            color: $text;
+            padding: 0 10px;
+        }
+    }
+}

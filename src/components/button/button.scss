@@ -1,0 +1,31 @@
+@import '../../allColor.scss';
+
+.button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .6s;
+    margin: 15px 10px;
+
+    &:hover {
+        box-shadow: 0 0 6px 2px $boxShodow;
+    }
+
+    &-text {
+        font-size: 16px;
+        color: $white;
+    }
+}
+
+.btn-blue.button {
+    background: #123d52;
+}
+
+.btn-white.button {
+    background: $white;
+    border: 1px solid #123d52;
+
+    .button-text {
+        color: #123d52;
+    }
+}
